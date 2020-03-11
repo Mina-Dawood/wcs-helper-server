@@ -7,7 +7,7 @@ const prod = require('./prod.router');
 
 const app = express();
 
-app.use(cors({ origin: 'https://github.vodafone.com/' }));
+app.use(cors());
 
 app.use('/api/uat', uat);
 app.use('/api/staging2', staging2);
