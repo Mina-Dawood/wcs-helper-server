@@ -14,5 +14,9 @@ app.use('/api/staging2', staging2);
 app.use('/api/prodref', prodref);
 app.use('/api/prod', prod);
 
+app.get('/', (req, res) => {
+    res.send('WCS Helper Server is Running ...');
+})
+
 const port = process.env.PORT || 5000;
 app.listen(port);
