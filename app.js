@@ -19,8 +19,8 @@ app.get('/', (req, res) => {
     res.send('WCS Helper Server is Running ...');
 })
 
-app.get('/api/load-json/:url', (req, res) => {
-    const url = req.params.url;
+app.get('/api/load-json', (req, res) => {
+    const url = req.query.url;
     request(url, { json: true }, (err, subRes, body) => {
         if (err) { return console.log(err); }
         res.send(subRes.body);
